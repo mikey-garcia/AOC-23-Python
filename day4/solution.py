@@ -2,11 +2,11 @@ def part1(cases):
     import math
     part1=0
     for hand_string in cases:
-        matches=0
         lhs, rhs = hand_string.split("|")
         winning_cards =[ int(i) for i in lhs.split(":")[1].split(" ")[1::] if i!='' ]
         hand =[ int(i) for i in rhs.split(" ") if i!='' ]
-
+        
+        matches=0
         for number in hand:
             if number in winning_cards:
                 matches+=1
